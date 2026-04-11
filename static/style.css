@@ -5,6 +5,8 @@ body {
 }
 
 /* 🔥 CENTER CONTENT */
+
+
 .bg-overlay {
     position: relative;
     min-height: 100vh;
@@ -14,6 +16,7 @@ body {
     align-items: center;
     text-align: center;
 }
+
 
 /* 🔥 BACKGROUND + GRADIENT OVERLAY */
 .bg-overlay::before {
@@ -28,6 +31,10 @@ body {
     background-blend-mode: overlay;
 
     z-index: -1;
+}
+
+.index-overlay{
+    align-items: left;
 }
 
 /* 🔷 BACKGROUNDS */
