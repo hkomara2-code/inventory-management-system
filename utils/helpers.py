@@ -1,3 +1,35 @@
+# Lambda (anonymous function)
+apply_discount = lambda price: price * 0.9   # 10% discount
+
+
+# Recursion (Merge Sort by price)
+def merge_sort(products):
+    if len(products) <= 1:
+        return products
+
+    mid = len(products) // 2
+    left = merge_sort(products[:mid])
+    right = merge_sort(products[mid:])
+
+    return merge(left, right)
+
+
+def merge(left, right):
+    result = []
+    i = j = 0
+
+    while i < len(left) and j < len(right):
+        if left[i].price < right[j].price:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+
 
 # File handling
 def save_receipt(cart):
@@ -10,25 +42,3 @@ def save_receipt(cart):
             f.write(f"\nTotal: Rs.{total}")
     except Exception as e:
         print("Error saving receipt:", e)
-
-def update_inventory(cart):
-    try:
-        with open("inventory.txt", "r") as f:
-            lines = f.readlines()
-
-        new_lines = []
-
-        for line in lines:
-            name, price, qty, category = line.strip().split(",")
-
-            for item in cart:
-                if item.name == name:
-                    qty = str(int(qty) - 1)
-
-            new_lines.append(f"{name},{price},{qty},{category}\n")
-
-        with open("inventory.txt", "w") as f:
-            f.writelines(new_lines)
-
-    except Exception as e:
-        print("Error updating inventory:", e)
