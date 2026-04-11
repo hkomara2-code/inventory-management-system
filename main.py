@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 from tasks.task_manager import InventoryManager
 from utils.helpers import save_receipt, update_inventory
 app = Flask(__name__)
@@ -25,7 +25,7 @@ def products(category):
 @app.route("/add/<name>")
 def add(name):
     manager.add_to_cart(name)
-    return redirect("/cart")
+    return redirect(request.referrer)
 
 
 # 🔷 VIEW CART

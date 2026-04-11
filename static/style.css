@@ -5,6 +5,8 @@ body {
 }
 
 /* 🔥 CENTER CONTENT */
+
+
 .bg-overlay {
     position: relative;
     min-height: 100vh;
@@ -15,6 +17,7 @@ body {
     text-align: center;
 }
 
+
 /* 🔥 BACKGROUND + GRADIENT OVERLAY */
 .bg-overlay::before {
     content: "";
@@ -24,10 +27,14 @@ body {
     background-size: cover;
     background-position: center;
 
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(209, 183, 183, 0.5);
     background-blend-mode: overlay;
 
     z-index: -1;
+}
+
+.index-overlay{
+    align-items: left;
 }
 
 /* 🔷 BACKGROUNDS */
@@ -68,8 +75,8 @@ body {
 
 /* 🔥 CARDS */
 .card {
-    background: rgba(255, 255, 255, 0.9);
-    color: black;
+    background: rgba(206, 172, 172, 0.638);
+    color: rgb(223, 208, 208);
     margin: 15px auto;
     padding: 15px;
     border-radius: 15px;
@@ -88,7 +95,7 @@ button {
     background: linear-gradient(45deg, #000000, #000000);
     border-radius: 20px;
     border: none;
-    color: white;
+    color: rgb(190, 164, 164);
     cursor: pointer;
     font-size: 14px;
 }
@@ -100,4 +107,33 @@ button:hover {
 /* 🔥 LINKS */
 a {
     text-decoration: none;
+}
+body {
+    font-size: 18px;
+    color: black;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.card {
+    font-size: 16px;
+    color: black;
+}
+
+button {
+    font-size: 16px;
+}
+
+.card h3 {
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
 }

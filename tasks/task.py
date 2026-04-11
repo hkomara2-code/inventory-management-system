@@ -1,6 +1,6 @@
 class Product:
     def __init__(self, name, price, quantity, category):
-        self.name = name.lower().strip()   # string cleaning
+        self.name = name.upper().strip()   # string cleaning
         self.price = price
         self.quantity = quantity
         self.category = category
