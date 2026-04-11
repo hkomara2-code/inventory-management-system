@@ -1,5 +1,4 @@
 from tasks.task import Product
-from utils.helpers import apply_discount, merge_sort
 
 class InventoryManager:
     def __init__(self):
@@ -8,7 +7,7 @@ class InventoryManager:
 
     def load_products(self):
         try:
-            with open("tasks\inventory.txt", "r") as f:
+            with open("inventory.txt", "r") as f:
                 for line in f:
                     name, price, qty, category = line.strip().split(",")
                     self.products.append(
@@ -18,17 +17,15 @@ class InventoryManager:
             print("Inventory file not found!")
 
     def show_products(self):
-        sorted_products = merge_sort(self.products)
-        for p in sorted_products:
+        for p in self.products:
             print(p)
 
     def add_to_cart(self, name):
         for p in self.products:
             if p.name == name.lower():
                 if p.quantity > 0:
-                    discounted_price = apply_discount(p.price)
                     self.cart.append(
-                        Product(p.name, discounted_price, 1, p.category)
+                        Product(p.name, p.price, 1, p.category)
                     )
                     p.quantity -= 1
                     print("Added to cart!")
