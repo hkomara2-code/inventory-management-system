@@ -22,7 +22,8 @@ class InventoryManager:
 
     def add_to_cart(self, name):
         for p in self.products:
-            if p.name == name.lower():
+            print(p.name, name)
+            if p.name == name:
                 if p.quantity > 0:
                     self.cart.append(
                         Product(p.name, p.price, 1, p.category)

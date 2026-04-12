@@ -1,4 +1,18 @@
 coffee,50,10,beverage
 tea,30,15,beverage
+green tea,40,12,beverage
+cold coffee,70,8,beverage
+lemon juice,35,10,beverage
+milkshake,90,6,beverage
 sandwich,80,5,food
+burger,120,7,food
+pizza slice,150,6,food
+pasta,130,5,food
+peri peri fries,60,10,food
+noodles,110,8,food
 cake,100,3,dessert
+icecream,60,10,dessert
+brownie,80,6,dessert
+donut,50,12,dessert
+cupcake,40,10,dessert
+chocolate mousse,90,5,dessert
