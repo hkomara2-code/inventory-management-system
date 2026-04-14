@@ -1,4 +1,4 @@
-coffee,50,10,beverage
+coffee,5,10,beverage
 tea,30,15,beverage
 green tea,40,12,beverage
 cold coffee,70,8,beverage
